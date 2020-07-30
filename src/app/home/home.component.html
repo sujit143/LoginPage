@@ -1,0 +1,40 @@
+<!-- Table Start -->
+
+<br/><br/>
+<div class="container">
+    <div class="card card-login mx-auto text-center bg-dark" style="width: 1041px;">
+        <div class="card-header mx-auto bg-dark" >
+            <marquee>
+                <h1 style="color: rgb(245, 16, 8);">All Registered Users</h1>
+                </marquee>
+            <span> <img src="assets/alluser.jpg" width="1000px" height="200px"> </span><br/>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">UserName</th>
+                        <th scope="col">FirstName</th>
+                        <th scope="col">LastName</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users; index as i">
+                        <th>{{i+1}}</th>
+                        <td>{{user.username}}</td>
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>
+                            <a (click)="deleteUser(user.id)" class="text-danger" style="cursor: pointer;">Delete</a>
+                        </td>
+                       </tr>
+                </tbody>
+            </table>
+            <h6 style="float: right; color: antiquewhite;">Total Users : {{upUserCount}}</h6>
+        </div>
+    </div>
+</div>
+
+<!-- Table End -->

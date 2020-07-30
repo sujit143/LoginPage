@@ -1,0 +1,23 @@
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: white;
+    float: left;
+  }
+  
+  .align {
+    float: left;
+  }
+
+.container {
+    max-width: 1140px;
+    margin-left: -271px;
+}
+
+button.btn.btn-primary {
+    float: right;
+}
+
+a.btn.btn-link {
+    float: right;
+}
